@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="list">
+        <div class="list__message">
+            <p>Введите название задачи!</p>
+        </div>
+        <div class="list__addItem">
+            <input class="list__addItem_input" type="text" id="title" placeholder="Title...">
+            <button class="list__addItem_btn" id="addBtn">Добавить задачу</button>
+        </div>
+        <div class="list__items" id="tasks">
+            <div class="list__item">
+                <label class="list__item_label" for="checkbox_0"></label>
+                <input type="checkbox" class="list__item_checkbox" id="checkbox_0">
+                <p class="list__item_title">Название задачи</p>
+                <button class="list__item_remove">&#215;</button>
+            </div>
+        </div>
+        <div class="list__change">
+            <div class="list__change_item">
+                <p class="list__change_title">Выделить задачи:</p>
+                <button class="list__change_btn select" id="even">чётные</button>
+                <button class="list__change_btn select" id="odd">нечётные</button>
+                <button class="list__change_btn select" id="deselect">Убрать выделение</button>
+            </div>
+            <div class="list__change_item">
+                <p class="list__change_title">Удалить:</p>
+                <button class="list__change_btn remove" id="firstTask">первую задачу</button>
+                <button class="list__change_btn remove" id="lastTask">последнюю задачу</button>
+                <button class="list__change_btn remove" id="readyTasks">выполненные задачи</button>
+                <button class="list__change_btn remove" id="allTasks">все задачи</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

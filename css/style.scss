@@ -1,0 +1,175 @@
+// Обнуление
+
+*{padding: 0; margin: 0; border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height: 100%; width: 100%; font-size: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;}
+input,button,textarea{font-family: inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer; font-size:inherit; color: inherit; background: none;}
+button::-moz-focus-inner{padding: 0; border: 0;}
+a,a:visited{text-decoration: none; color: inherit}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size: inherit; font-weight: inherit;}
+
+body {
+    padding: 0 20px;
+    background: #f8f3e5;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto 0;
+    padding: 20px;
+
+    &__message {
+        display: none;
+        position: absolute;
+        top: 15px;
+        color: #583f42;
+        font-weight: bold;
+
+        &._block {
+            display: block;
+        }
+    }
+
+    &__addItem {
+        width: 100%;
+        display: flex;
+
+        &_input {
+            width: 75%;
+            height: 40px;
+            padding: 10px;
+            border: 1px #3f5855 solid;
+            font-size: 16px;
+        }
+
+        &_btn {
+            width: 25%;
+            height: 40px;
+            background: #3f5855;
+            color: #f8f3e5;
+            text-align: center;
+            font-size: 16px;
+            transition: all .3s ease;
+
+            &:hover {
+                box-shadow: 0px 2px 20px 2px #3f5855;
+                transition: all .3s ease;
+            }
+
+        }
+    }
+
+    &__items {
+        width: 75%;
+        margin: 20px 0;
+
+        &.even {
+            .list__item:nth-child(even) {
+                background: #b2bcbb;
+                border-radius: 2px;
+            }
+        }
+
+        &.odd {
+            .list__item:nth-child(odd) {
+                background: #b2bcbb;
+                border-radius: 2px;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        height: 30px;
+        align-items: center;
+        border-top: none;
+
+        &._ready {
+            .list__item_title {
+                text-decoration: line-through;
+            }
+            .list__item_label::before {
+                content: '\2714';
+                position: absolute;
+                top: -1px;
+                left: 1px;
+                font-size:12px;
+                color:green;
+            }
+        }
+
+      &_checkbox {
+        display: none;
+      }
+
+      &_label {
+        display: inline-block;
+        position: relative;
+        margin: 0 10px;
+        padding: 3px;
+        width: 13px;
+        height: 13px;
+        background-color:#FFF;
+        border: 1px solid gray;
+        border-radius:2px;
+        cursor: pointer;
+      }
+
+      &_title {
+        flex: 1 1 auto;
+      }
+
+      &_remove {
+        margin: 0 10px;
+        width: 20px;
+        height: 20px;
+        font-size: 24px;
+        color:#3f5855;
+        transition: all .3s ease;
+        text-decoration: none;
+
+        &:hover {
+            transform: scale(1.4);
+            transition: all .3s ease;
+        }
+      }
+    }
+
+    &__change {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25%;
+    
+        &_item {
+            text-align: center;
+            margin: 20px 0 0;
+        }
+    
+        &_btn {
+            margin: 5px 0 0;
+            display: block;
+            width: 150px;
+            height: 25px;
+            background: #3f5855;
+            color: #f8f3e5;
+            transition: all .3s ease;
+
+            &:hover {
+                box-shadow: 0px 2px 20px 2px #3f5855;
+                transition: all .3s ease;
+            }
+        }
+    }
+}
